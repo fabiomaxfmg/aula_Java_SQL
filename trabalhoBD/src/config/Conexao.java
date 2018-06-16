@@ -19,7 +19,7 @@ public class Conexao {
     private static Connection conn;
     private final static String driver = "org.postgresql.Driver"; //adicionar biblioteca JDBC
     private final static String ip = "localhost/";
-    public static String dataBase = "trabalhobd"; //alterar de acordo com o PgAdmin
+    public static String dataBase = "aula"; //alterar de acordo com o PgAdmin
     public static String user = "postgres"; //alterar de acordo com o PgAdmin
     public static String password = "postgres"; //alterar de acordo com o PgAdmin
 
