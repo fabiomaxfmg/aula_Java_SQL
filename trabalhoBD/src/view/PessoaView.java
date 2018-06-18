@@ -5,6 +5,7 @@
  */
 package view;
 
+import controller.PessoaController;
 /**
  *
  * @author Administrador
@@ -17,6 +18,10 @@ public class PessoaView extends javax.swing.JDialog {
     public PessoaView(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
+        
+        PessoaController.atualizaTabela(tabela); //alterar
+        PessoaController.limparCampos(this); //alterar
+
     }
 
     /**
@@ -41,8 +46,8 @@ public class PessoaView extends javax.swing.JDialog {
         tabela = new javax.swing.JTable();
         jBLimpar = new javax.swing.JButton();
         jbtAdicionar = new javax.swing.JButton();
-        jBAlterar = new javax.swing.JButton();
-        jBExcluir = new javax.swing.JButton();
+        jbtAlterar = new javax.swing.JButton();
+        jbtExcluir = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -50,6 +55,8 @@ public class PessoaView extends javax.swing.JDialog {
         jLabel1.setText("Pessoa");
 
         jLabel2.setText("Codigo");
+
+        jtfCodigo.setEditable(false);
 
         jLabel3.setText("Nome");
 
@@ -82,9 +89,9 @@ public class PessoaView extends javax.swing.JDialog {
 
         jbtAdicionar.setText("Adicionar");
 
-        jBAlterar.setText("Alterar");
+        jbtAlterar.setText("Alterar");
 
-        jBExcluir.setText("Excluir");
+        jbtExcluir.setText("Excluir");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -124,9 +131,9 @@ public class PessoaView extends javax.swing.JDialog {
                         .addGap(18, 18, 18)
                         .addComponent(jbtAdicionar)
                         .addGap(18, 18, 18)
-                        .addComponent(jBAlterar)
+                        .addComponent(jbtAlterar)
                         .addGap(18, 18, 18)
-                        .addComponent(jBExcluir)))
+                        .addComponent(jbtExcluir)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -151,8 +158,8 @@ public class PessoaView extends javax.swing.JDialog {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jBLimpar)
                     .addComponent(jbtAdicionar)
-                    .addComponent(jBAlterar)
-                    .addComponent(jBExcluir))
+                    .addComponent(jbtAlterar)
+                    .addComponent(jbtExcluir))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 246, Short.MAX_VALUE)
                 .addContainerGap())
@@ -161,11 +168,40 @@ public class PessoaView extends javax.swing.JDialog {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    /**
+    private void jtfCodigoActionPerformed(java.awt.event.ActionEvent evt) {                                          
+        // TODO add your handling code here:
+    }                                         
+
+    private void tabelaMouseClicked(java.awt.event.MouseEvent evt) {                                    
+        // TODO add your handling code here:
+        PessoaController.atualizaCampos(this); //alterar
+    }                                   
+
+    private void jbtAlterarActionPerformed(java.awt.event.ActionEvent evt) {                                           
+        // TODO add your handling code here:
+        PessoaController.alterar(this); //alterar
+    }                                          
+
+    private void jbtAdicionarActionPerformed(java.awt.event.ActionEvent evt) {                                             
+        // TODO add your handling code here:
+        PessoaController.adicionar(this); //alterar
+    }                                            
+
+    private void jbtExcluirActionPerformed(java.awt.event.ActionEvent evt) {                                           
+        // TODO add your handling code here:
+        PessoaController.excluir(this); //alterar
+    }                                          
+
+    private void jbtLimparActionPerformed(java.awt.event.ActionEvent evt) {                                          
+        // TODO add your handling code here:
+        PessoaController.limparCampos(this); //alterar
+    }                                         
+
+/**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
+
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
@@ -182,7 +218,7 @@ public class PessoaView extends javax.swing.JDialog {
         } catch (InstantiationException ex) {
             java.util.logging.Logger.getLogger(PessoaView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.LogjTCPFer(PessoaView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PessoaView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(PessoaView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
@@ -204,8 +240,6 @@ public class PessoaView extends javax.swing.JDialog {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JButton jBAlterar;
-    public javax.swing.JButton jBExcluir;
     public javax.swing.JButton jBLimpar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -216,6 +250,8 @@ public class PessoaView extends javax.swing.JDialog {
     public javax.swing.JTextField jTCPF;
     public javax.swing.JTextField jTEmail;
     public javax.swing.JButton jbtAdicionar;
+    public javax.swing.JButton jbtAlterar;
+    public javax.swing.JButton jbtExcluir;
     public javax.swing.JTextField jtfCodigo;
     public javax.swing.JTextField jtfNome;
     public javax.swing.JTable tabela;

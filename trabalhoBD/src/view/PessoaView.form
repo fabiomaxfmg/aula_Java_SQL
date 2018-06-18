@@ -65,9 +65,9 @@
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="jbtAdicionar" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="jBAlterar" min="-2" max="-2" attributes="0"/>
+                      <Component id="jbtAlterar" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="jBExcluir" min="-2" max="-2" attributes="0"/>
+                      <Component id="jbtExcluir" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace max="32767" attributes="0"/>
@@ -99,8 +99,8 @@
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jBLimpar" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jbtAdicionar" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jBAlterar" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jBExcluir" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jbtAlterar" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jbtExcluir" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="jScrollPane1" pref="246" max="32767" attributes="0"/>
@@ -124,6 +124,9 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="jtfCodigo">
+      <Properties>
+        <Property name="editable" type="boolean" value="false"/>
+      </Properties>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
       </AuxValues>
@@ -225,7 +228,7 @@
         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
       </AuxValues>
     </Component>
-    <Component class="javax.swing.JButton" name="jBAlterar">
+    <Component class="javax.swing.JButton" name="jbtAlterar">
       <Properties>
         <Property name="text" type="java.lang.String" value="Alterar"/>
       </Properties>
@@ -233,7 +236,7 @@
         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
       </AuxValues>
     </Component>
-    <Component class="javax.swing.JButton" name="jBExcluir">
+    <Component class="javax.swing.JButton" name="jbtExcluir">
       <Properties>
         <Property name="text" type="java.lang.String" value="Excluir"/>
       </Properties>

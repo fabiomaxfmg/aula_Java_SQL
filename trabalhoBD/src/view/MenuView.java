@@ -31,6 +31,7 @@ public class MenuView extends javax.swing.JFrame {
         menuBar = new javax.swing.JMenuBar();
         jmnList = new javax.swing.JMenu();
         jmiAnimal = new javax.swing.JMenuItem();
+        jMenuItem1 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Exemplo de Software");
@@ -47,6 +48,14 @@ public class MenuView extends javax.swing.JFrame {
             }
         });
         jmnList.add(jmiAnimal);
+
+        jMenuItem1.setText("Pessoa");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
+        jmnList.add(jMenuItem1);
 
         menuBar.add(jmnList);
 
@@ -75,6 +84,11 @@ public class MenuView extends javax.swing.JFrame {
         GrupoView dialog = new GrupoView(this, true); //alterar
         dialog.setVisible(true); //alterar
     }//GEN-LAST:event_jmiAnimalActionPerformed
+
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+        PessoaView dialog = new PessoaView(this, true); //alterar
+        dialog.setVisible(true); //alterar
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -114,6 +128,7 @@ public class MenuView extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JDesktopPane desktopPane;
+    private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jmiAnimal;
     private javax.swing.JMenu jmnList;
     private javax.swing.JMenuBar menuBar;

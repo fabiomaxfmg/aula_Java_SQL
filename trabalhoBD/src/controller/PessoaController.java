@@ -66,8 +66,8 @@ public class PessoaController {
 
         // habilita/desabilita botões
         tela.jbtAdicionar.setEnabled(false);
-        tela.jBAlterar.setEnabled(true);
-        tela.jBExcluir.setEnabled(true);
+        tela.jbtAlterar.setEnabled(true);
+        tela.jbtExcluir.setEnabled(true);
     }
 
     public static void adicionar(PessoaView tela) {
